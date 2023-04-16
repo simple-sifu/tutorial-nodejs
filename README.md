@@ -30,5 +30,12 @@
 ## 5.xx Server Error
 - 500 - Internal Server Error
 
+## Restful API Standards
+- GET /todos (Get all)
+- GET /todos/1 (Get a todo with id=1)
+- POST /todos (Add a todo)
+- PUT /todos/1 (Update todo with id=1)
+- DELETE /todos/1 (Delete todo with id=1)
+
 
 
