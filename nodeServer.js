@@ -1,7 +1,9 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    console.log(req);
+    const { headers, url, method } = req;
+    console.log(`method=${method},  url=${url}, header= ${JSON.stringify(headers)}`);
+    res.end();
 })
 
 const PORT = 8000;

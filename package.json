@@ -1,0 +1,23 @@
+{
+  "name": "tutorial-nodejs",
+  "version": "1.0.0",
+  "description": "# Header - content - cookies",
+  "main": "nodeServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node nodeServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simple-sifu/tutorial-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simple-sifu/tutorial-nodejs/issues"
+  },
+  "homepage": "https://github.com/simple-sifu/tutorial-nodejs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
