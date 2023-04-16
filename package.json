@@ -2,10 +2,10 @@
   "name": "tutorial-nodejs",
   "version": "1.0.0",
   "description": "# Header - content - cookies",
-  "main": "server.js",
+  "main": "./server/server.js",
   "scripts": {
-    "start": "NODE_ENV=Production node server",
-    "dev": "nodemon server"
+    "start": "NODE_ENV=Production node ./server/server",
+    "dev": "nodemon ./server/server"
   },
   "repository": {
     "type": "git",
