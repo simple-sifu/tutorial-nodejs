@@ -27,6 +27,7 @@
  ```
 
 # Postman is a headless browser we can use to test
+- collections are stored in server/postman dir
 
 # HTTP Codes
 
