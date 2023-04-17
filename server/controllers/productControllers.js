@@ -10,11 +10,11 @@ exports.getProducts = (req, res) => {
   res.status(200).json({ success: true, data: products });
 };
 
-// @desc  Get single product
-// @route GET /api/v1/products/:id
+// @desc  Get products that fit searchTerm criteria
+// @route GET /api/v1/products/:searchTerm
 // @access Public
 exports.getProduct = (req, res) => {
-  res.status(200).json({ success: true, data: search(req.params.id) });
+  res.status(200).json({ success: true, data: search(req.params.searchTerm) });
 };
 
 // @desc  Create new product
