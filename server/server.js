@@ -1,19 +1,20 @@
-const express = require("express");
-const dotenv = require("dotenv");
+const express = require('express');
+const dotenv = require('dotenv');
 
 // Route files
-const productRoutes = require("./routes/productRoutes");
+const productRoutes = require('./routes/productRoutes');
 
 // Load env vars
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: './config/config.env' });
 
 const app = express();
 
-app.use("/api/v1/products", productRoutes);
+app.use('/api/v1/products', productRoutes);
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(
   PORT,
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+  // eslint-disable-next-line no-console
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`),
 );

@@ -1,11 +1,20 @@
+/* eslint-disable no-underscore-dangle */
+// prefix search only
+// case insensitive
+
+// This is how it works....
+// searchTerm = 'cat'
+// will return 'cat' but not 'bobCat'
 function createSearchCache(items) {
-  console.log("Creating SearchCache");
+  // eslint-disable-next-line no-console
+  console.log('Creating SearchCache');
   const hashMap = {};
-  const productMap = items.map((product) => {
-    const searchWordsArr = product.name.split(" ").concat(product.tags);
+  const productCache = {};
+  items.forEach((product) => {
+    const searchWordsArr = product.name.split(' ').concat(product.tags);
     searchWordsArr.forEach((searchWord) => {
-      let growingChar = "";
-      searchWord.split("").forEach((char) => {
+      let growingChar = '';
+      searchWord.split('').forEach((char) => {
         growingChar = growingChar.concat(char.toLowerCase());
         if (!hashMap[growingChar]) {
           hashMap[growingChar] = [product._id];
@@ -14,13 +23,12 @@ function createSearchCache(items) {
         }
       });
     });
+    productCache[product._id] = product;
   });
-  console.log("hashMap =", hashMap);
+
   return (searchTerm) => {
     const arrOfIds = hashMap[searchTerm];
-    return arrOfIds.map((id) => {
-      productMap[id];
-    });
+    return arrOfIds.map((id) => productCache[id]);
   };
 }
 
