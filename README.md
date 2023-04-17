@@ -15,6 +15,17 @@
 
 - npm init @eslint/config
 
+
+- Get eslint plugin, add this code to your settings.json
+```
+ {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": ["javascript"]
+ }
+ ```
+
 # Postman is a headless browser we can use to test
 
 # HTTP Codes
