@@ -14,7 +14,7 @@ exports.getProducts = (req, res) => {
 // @route GET /api/v1/products/:searchTerm
 // @access Public
 exports.getProduct = (req, res) => {
-  res.status(200).json({ success: true, data: search(req.params.searchTerm) });
+  res.status(200).json({ success: true, data: search(req.params.id) });
 };
 
 // @desc  Create new product

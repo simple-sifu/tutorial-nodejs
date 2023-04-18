@@ -11,7 +11,7 @@ const app = express();
 
 app.use('/api/v1/products', productRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3090;
 
 app.listen(
   PORT,
