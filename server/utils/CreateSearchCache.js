@@ -24,6 +24,7 @@ function createSearchCache(items) {
   });
 
   return (searchTerm) => {
+    if (searchTerm === '') return [];
     const arrayOfIds = hashMap[searchTerm.toLowerCase()] || [];
     return arrayOfIds.map((id) => productCache[id]);
   };

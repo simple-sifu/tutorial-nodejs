@@ -84,4 +84,13 @@ describe('Search Utility', () => {
       ],
     }]);
   });
+
+  test('empty string searchterm should return empty array', () => {
+    const search = CreateSearchCache(productData);
+    const searchTerm = '';
+
+    const searchResult = search(searchTerm);
+
+    expect(searchResult).toEqual([]);
+  });
 });
