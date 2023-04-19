@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, 'client/index.js'),
+    main: path.resolve(__dirname, 'client/index.jsx'),
   },
   module: {
     rules: [
@@ -45,5 +45,7 @@ module.exports = {
       },
     ],
   },
-
+  resolve: {
+    extensions: ['.jsx', '.js'],
+  },
 };
