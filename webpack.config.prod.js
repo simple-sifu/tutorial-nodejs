@@ -1,11 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.config.common');
 
-
-module.exports = merge(commonConfig,{
+module.exports = merge(commonConfig, {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'builds/prod'),
