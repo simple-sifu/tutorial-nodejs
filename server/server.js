@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const productRoutes = require('./routes/productRoutes');
 
 // Load env vars
-dotenv.config({ path: './config/config.env' });
+dotenv.config({ path: './core/config/config.env' });
 
 const app = express();
 
