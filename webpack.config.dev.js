@@ -7,12 +7,12 @@ const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.config.common');
 
 module.exports = merge(commonConfig, {
-  // doesnt minify
+  // doesnt minify by default
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'builds/dev'),
-    // new contenthash will alert browser that js has changed so
-    // it will not cache it.
+    // new contenthash number everytime underlying code is changed will alert browser that
+    // js has changed so it will not cache it.
     filename: 'js/[name].[contenthash].js',
     // clean the dev directory of old files
     clean: true,
@@ -39,7 +39,7 @@ module.exports = merge(commonConfig, {
       filename: 'index.html',
       template: 'client/template.html',
     }),
-    // remove css from js bundle
+    // remove css from js bundle and save it separately in its own file
     new MiniCssExtractPlugin({
       filename: 'css/main.[contenthash].css',
     }),

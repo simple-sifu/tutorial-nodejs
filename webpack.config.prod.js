@@ -6,7 +6,7 @@ const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.config.common');
 
 module.exports = merge(commonConfig, {
-  // automates minifies
+  // minifies builds by default !
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'builds/prod'),
@@ -20,7 +20,7 @@ module.exports = merge(commonConfig, {
       filename: 'index.html',
       template: 'client/template.html',
     }),
-    // remove css from js bundle
+    // remove css from js bundle and save it separately in its own file
     new MiniCssExtractPlugin({
       filename: 'css/main.css',
     }),
