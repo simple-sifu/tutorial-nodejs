@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 // Route files
 const productRoutes = require('./routes/productRoutes');
@@ -8,6 +9,7 @@ const productRoutes = require('./routes/productRoutes');
 dotenv.config({ path: './core/config/config.env' });
 
 const app = express();
+app.use(cors());
 
 app.use('/api/v1/products', productRoutes);
 
