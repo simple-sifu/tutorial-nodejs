@@ -8,11 +8,11 @@ function App() {
   const {isLoading, data, error} = useSelector(state => state.products)
   const dispatch = useDispatch();
 
-  const changeHandler = (e) => {
-    setSearchValue(e.target.value)
-    dispatch(getProducts(searchValue));
+  const changeHandler = async (e) => {
+    const searchWord = e.target.value;
+    setSearchValue(searchWord);
+    dispatch(getProducts(searchWord));
   }
-  
   return (
     <div className="App">
       <input value={searchValue} onChange={(e) => changeHandler(e)} />
