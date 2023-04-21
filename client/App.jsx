@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getProducts } from './productSearch/ProductSlice';
+import { getProducts } from './Products/ProductSlice';
 
 
 function App() {
