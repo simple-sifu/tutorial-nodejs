@@ -4,9 +4,10 @@ import { getProducts } from './ProductSlice';
 
 function ProductComponent() {
     const [searchValue, setSearchValue] = React.useState('');
+
     const {isLoading, data, error} = useSelector(state => state.products)
     const dispatch = useDispatch();
-  
+    
     const changeHandler = (e) => {
       const searchWord = e.target.value;
       setSearchValue(searchWord);
