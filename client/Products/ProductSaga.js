@@ -4,7 +4,8 @@ import { HttpGateway } from '../../core/HttpGateway';
 
 function* getProductsHandler(action) {
     try{
-        const products = yield call(() => HttpGateway().get(action.payload));
+        const PRODUCT_URL = process.env.REACT_APP_PRODUCT_API_CONFIG
+        const products = yield call(() => HttpGateway().get(PRODUCT_URL + action.payload));
         yield put(getProductsSuccess(products))
     }catch(err){
         yield put(getProductsFailure(`${err.name}:${err.message}`))
