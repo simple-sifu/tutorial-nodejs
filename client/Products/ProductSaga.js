@@ -13,7 +13,5 @@ function* getProductsHandler(action) {
 }
 
 export function* productSaga(){
-    // special feature with toolkit
     yield takeLatest('products/getProducts', getProductsHandler);
-
 }
