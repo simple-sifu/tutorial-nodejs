@@ -1,9 +1,11 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { getProductsSuccess, getProductsFailure } from './ProductSlice';
 
+const PRODUCT_API_CONFIG = process.env.REACT_APP_API_CONFIG
+
 function* getProductsHandler(action) {
     try{
-        const products = yield call(() => fetch(`http://localhost:8080/api/v1/products/${action.payload}`));
+        const products = yield call(() => fetch(`${PRODUCT_API_CONFIG}${action.payload}`));
         const formattedProducts = yield products.json()
         yield put(getProductsSuccess(formattedProducts))
     }catch(err){

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Dotenv = require('dotenv-webpack');
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { merge } = require('webpack-merge');
@@ -43,5 +44,6 @@ module.exports = merge(commonConfig, {
     new MiniCssExtractPlugin({
       filename: 'css/main.[contenthash].css',
     }),
+    new Dotenv(),
   ],
 });
