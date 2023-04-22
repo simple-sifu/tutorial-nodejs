@@ -4,14 +4,11 @@
   "description": "# Header - content - cookies",
   "main": "./server/server.js",
   "scripts": {
-    "build": "webpack --config=webpack.config.dev.js",
-    "build-prod": "webpack --config=webpack.config.prod.js",
     "start": "concurrently \"nodemon ./server/server\" \"webpack-dev-server --config=webpack.config.dev.js\"",
     "server": "nodemon ./server/server",
-    "test": "jest --watch",
-    "start_old": "NODE_ENV=Production node ./server/server",
-    "dev_old": "nodemon ./server/server",
-    "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open --hot --inline --progress --colors --watch --content-base ./\" \"nodemon ./server/server.js\""
+    "build-dev": "webpack --config=webpack.config.dev.js",
+    "build": "webpack --config=webpack.config.prod.js",
+    "test": "jest --watch"  
   },
   "repository": {
     "type": "git",
