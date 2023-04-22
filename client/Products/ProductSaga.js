@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { getProductsSuccess, getProductsFailure } from './ProductSlice';
-import { HttpGateway } from '../../core/HttpGateway'; 
+import { HttpGateway } from '../common/HttpGateway'; 
 
 function* getProductsHandler(action) {
     try{

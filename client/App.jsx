@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductComponent from './Products/ProductComponent'
 import { Provider } from 'react-redux';
-import store from '../core/redux/store';
+import store from './common/store';
 
 function App() {
   return (
