@@ -7,7 +7,7 @@ function ProductComponent() {
     const {isLoading, data, error} = useSelector(state => state.products)
     const dispatch = useDispatch();
   
-    const changeHandler = async (e) => {
+    const changeHandler = (e) => {
       const searchWord = e.target.value;
       setSearchValue(searchWord);
       dispatch(getProducts(searchWord));
