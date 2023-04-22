@@ -1,12 +1,16 @@
 import React from 'react';
 import ProductComponent from './Products/ProductComponent'
+import { Provider } from 'react-redux';
+import store from '../core/redux/store';
 
 function App() {
 
   return (
-    <div className="App">
-      <ProductComponent />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <ProductComponent />
+      </div>
+    </Provider>
   );
 }
 export default App;
