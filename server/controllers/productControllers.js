@@ -1,11 +1,11 @@
-// @desc  Get all products that meet search criteria
-// @route GET /api/v1/products
-// @access Public
 const products = require('../data/productData');
 const createSearchCache = require('../utils/CreateSearchCache');
 
 const search = createSearchCache(products);
 
+// @desc  Get all products that meet search criteria
+// @route GET /api/v1/products
+// @access Public
 exports.getProducts = (req, res) => {
   res.status(200).json({ success: true, data: products });
 };
